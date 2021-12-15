@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+        <h1 class="app-name header">Admin Panel</h1>
+            <a href="#"><p class="work header menu-1">Your Work</p></a>
+            
+            <a href="#"><p class="projects header menu-1">Projects</p></a>
+            <a href="#"><p class="filters header menu-1">Filters</p></a>
+            <a href="#"><p class="dashboard header menu-1">Dashboard</p></a>
+            <a href="#"><p class="people header menu-1">People</p></a>
+            <a href="#"><p class="apps header menu-1">Apps</p></a>
+        </div>
+        <div class="header-right">
+            <a onclick="history.back()"><p class="work header menu-1 admin-space go-home">Go back home</p></a>
+            <a href="#"><p class="work header menu-1 admin-space"><i class="bi bi-bell"></i></p></a>
+            <a href="#"><p class="filters header menu-1 admin-space"><i class="bi bi-gear" style="font-size: 20px;"></i></p></a>
+            <a href="#"><p class="projects header menu-1 header-user admin-space">Admin Profile</p></a>
+        </div>
+    </header>
+    <main>
+        <div class="left-panel">
+            <p class="user-info"><img src="./img/logo.png" alt="" class="logo"><strong>Username</strong></p>
+            <a href="#"><p class="admin-links link"><i class="bi bi-kanban" style="font-size: 20px;"></i> Roadmap</p></a>
+            <a href="#"><p class="admin-links link"><i class="bi bi-table" style="font-size: 20px;"></i> Board</p></a>
+            <a href="#"><p class="admin-links link"><i class="bi bi-code-slash" style="font-size: 20px;"></i> Code</p></a>
+            <a href="#"><p class="admin-links link"><i class="bi bi-file-earmark-break"style="font-size: 20px;"></i> Project Pages</p></a>
+            <a href="#"><p class="admin-links link"><i class="bi bi-node-plus"style="font-size: 20px;"></i> Shortcuts</p></a>
+            <a href="#"><p class="admin-links link"><i class="bi bi-gear-wide-connected" style="font-size: 20px;"></i> Project settings</p></a>
+            <i class="bi-arrow-left-circle-fill move-arrow" onclick=moveToRight()></i>
+            <i class="bi-arrow-right-circle-fill remove-arrow" onclick=moveToLeft()></i>
+        </div>
+        <div class="right-panel">
+            <div class="container graph">
+                    <canvas id="stats"></canvas>
+            </div>
+                <div class="container graph3">
+                        <canvas id="donut-chart"></canvas>
+                </div>
+                <div class="container graph2">
+                        <canvas id="chart2"></canvas>
+                </div>
+                <div class="container graph3">
+                        <canvas id="chart3"></canvas>
+                </div>
+                <div class="container graph4">
+                        <canvas id="chart4"></canvas>
+                </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js"></script>
+    <script src="./stats/stats.js"></script>
+</body>
+</html>
